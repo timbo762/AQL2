@@ -16,4 +16,6 @@ public class Exo1Test {
         assertTrue(Palindromepr.isPalindrome("A man a plan a canal Panama"));
         assertFalse(Palindromepr.isPalindrome("Java"));
     }
+
+
 }

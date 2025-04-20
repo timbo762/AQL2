@@ -20,4 +20,14 @@ public class Exo3Test {
     public void testNullArray() {
         BinarySearchpr.binarySearch(null, 5);
     }
+    @Test
+    public void testEmptyArray() {
+        int[] array = {};
+        assertEquals(-1, BinarySearchpr.binarySearch(array, 5));  // Tableau vide
+    }
+    @Test
+    public void testNegativeNumberArray() {
+        int[] array = {-10, -5, 0, 5, 10};
+        assertEquals(3, BinarySearchpr.binarySearch(array, 5));  // Cas avec des nombres négatifs
+    }
 }

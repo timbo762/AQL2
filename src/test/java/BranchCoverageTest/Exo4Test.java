@@ -30,4 +30,5 @@ public class Exo4Test {
             QuadraticEquationpr.solve(0, 2, 1);
         });
     }
+
 }

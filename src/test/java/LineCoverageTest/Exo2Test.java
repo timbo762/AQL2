@@ -26,12 +26,21 @@ class Exo2Test {
     void testDifferentLengths() {
         assertFalse(Anagrampr.isAnagram("abcd", "abc"), "Des chaînes de longueurs différentes ne peuvent pas être des anagrammes");
     }
+    @Test
+    void testWithRepeatedLetters() {
+        assertTrue(Anagrampr.isAnagram("aaabbb", "ababab"));
+    }
+
 
     @Test
     void testNullInputs() {
         assertThrows(NullPointerException.class, () -> Anagrampr.isAnagram(null, "test"), "Une des entrées est null");
         assertThrows(NullPointerException.class, () -> Anagrampr.isAnagram("test", null), "Une des entrées est null");
         assertThrows(NullPointerException.class, () -> Anagrampr.isAnagram(null, null), "Les deux entrées sont null");
+    }
+    @Test
+    void testWithSpacesAndCase() {
+        assertTrue(Anagrampr.isAnagram("The eyes", "They see"));
     }
 
     @Test

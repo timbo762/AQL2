@@ -24,5 +24,10 @@ public class Exo5Test {
     @Test
     public void testInvalidUpperBound() {
         assertThrows(IllegalArgumentException.class, () -> RomanNumeralpr.toRoman(4000));
+
+    }
+    @Test
+    public void testMultipleSymbols() {
+        assertEquals("MCMXCIV", RomanNumeralpr.toRoman(1994));  // Cas avec plusieurs symboles classiques
     }
 }

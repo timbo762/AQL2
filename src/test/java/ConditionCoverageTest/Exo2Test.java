@@ -36,4 +36,13 @@ import static org.junit.jupiter.api.Assertions.*;
     void testSameLengthAnagram() {
         assertTrue(Anagrampr.isAnagram("listen", "silent")); // cas positif avec lettres mélangées
     }
+     @Test
+     void testEqualLengthsNotAnagram() {
+         assertFalse(Anagrampr.isAnagram("java", "lava"));
+     }
+
+     @Test
+     void testValidAnagramWithSpacesAndCases() {
+         assertTrue(Anagrampr.isAnagram("Dormitory", "Dirty room"));
+     }
 }

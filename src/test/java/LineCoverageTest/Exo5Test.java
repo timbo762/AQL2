@@ -20,4 +20,9 @@ public class Exo5Test {
     public void testToRoman1994() {
         assertEquals("MCMXCIV", RomanNumeralpr.toRoman(1994));
     }
+    @Test
+    public void testToRomanMax() {
+        assertEquals("MMMCMXCIX", RomanNumeralpr.toRoman(3999));  // Cas avec le nombre maximum
+    }
 }
+

@@ -9,8 +9,18 @@ public class Exo1Test {
     @Test
     public void testConditions() {
         assertThrows(NullPointerException.class, () -> Palindromepr.isPalindrome(null));
-        assertTrue(Palindromepr.isPalindrome("RaceCar"));
-        assertFalse(Palindromepr.isPalindrome("Testing"));
-        assertTrue(Palindromepr.isPalindrome("No lemon no melon"));
+        assertTrue(Palindromepr.isPalindrome("Level"));
+        assertFalse(Palindromepr.isPalindrome("Example"));
+        assertTrue(Palindromepr.isPalindrome("A Santa at NASA"));
     }
+    @Test
+    public void testEmptyString() {
+        // Chaîne vide, while non exécuté
+        assertTrue(Palindromepr.isPalindrome(""));
+    }
+    @Test
+    public void testPalindromeWithNumbers() {
+        assertTrue(Palindromepr.isPalindrome("12321"));
+    }
+
 }

@@ -21,4 +21,27 @@ public class Exo3Test {
         int[] array = {1, 3, 5, 7, 9};
         assertEquals(-1, BinarySearchpr.binarySearch(array, 6));
     }
+    @Test
+    public void testEmptyArray() {
+        int[] array = {};
+        assertEquals(-1, BinarySearchpr.binarySearch(array, 1));  // Tableau vide
+    }
+
+    @Test
+    public void testSingleElementArrayFound() {
+        int[] array = {3};
+        assertEquals(0, BinarySearchpr.binarySearch(array, 3));  // Un seul élément et trouvé
+    }
+
+    @Test
+    public void testSingleElementArrayNotFound() {
+        int[] array = {3};
+        assertEquals(-1, BinarySearchpr.binarySearch(array, 1));  // Un seul élément mais non trouvé
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        int[] array = {-5, -3, -1, 1, 3};
+        assertEquals(2, BinarySearchpr.binarySearch(array, -1));  // Recherche d'un nombre négatif
+    }
 }

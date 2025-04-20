@@ -17,6 +17,12 @@ public class Exo4Test {
         double[] result = QuadraticEquationpr.solve(1, 2, 1); // delta = 0
         assertArrayEquals(new double[]{-1.0}, result);
     }
+    @Test
+    public void testAEqualZero() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            QuadraticEquationpr.solve(0, 1, 1);  // a = 0, exception attendue
+        });
+    }
 
     @Test
     public void testDeltaPositive() {

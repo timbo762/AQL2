@@ -15,4 +15,12 @@ public class Exo1Test {
     public void testPalindrome_False() {
         assertFalse(Palindromepr.isPalindrome("hello"));
     }
+    @Test
+    public void testPalindrome_Null() {
+        assertThrows(NullPointerException.class, () -> Palindromepr.isPalindrome(null));
+    }
+    @Test
+    public void testPalindrome_TwoSameCharacters() {
+        assertTrue(Palindromepr.isPalindrome("aa"));
+    }
 }

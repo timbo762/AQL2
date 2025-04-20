@@ -16,16 +16,18 @@ public class Exo2Test {
         assertFalse(Anagrampr.isAnagram("abc", "abcd")); // s1.length != s2.length
     }
 
-    @Test
-    void testAnagramFalseBranchMismatchCount() {
-        assertFalse(Anagrampr.isAnagram("test", "best")); // même longueur, lettres différentes
-    }
+
+
+
 
     @Test
     void testEdgeCaseEmptyStrings() {
         assertTrue(Anagrampr.isAnagram("", "")); // cas vide, branche true
     }
-
+    @Test
+    void testValidAnagramWithSpaces() {
+        assertTrue(Anagrampr.isAnagram("Clint Eastwood", "Old West Action"));
+    }
     @Test
     void testBranchNullFirst() {
         assertThrows(NullPointerException.class, () -> Anagrampr.isAnagram(null, "abc"));
